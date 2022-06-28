@@ -1,0 +1,102 @@
+body {
+  color: white;
+   
+}
+a {
+  font-family: "Lato", sans-serif;
+}
+
+#bg {
+   background-repeat: no-repeat;
+   background-size: 1550px 750px;
+   
+}
+#opa {
+  opacity: 0.8;
+}
+#opa2 {
+  color:#00FFFF;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#000428, #004E92) ;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+img {
+  width: 30%;
+  height: 22%;
+}
+#boxx {
+  color: white;
+  padding-left: 300px;
+  padding-right: 300px;
+
+}
+#boxx2{
+  padding: 80;
+ 
+  
+}
+#boxx3{
+  background: linear-gradient(white, #00BFFF);
+  padding: 100px;
+  padding-top: 30px;
+  opacity: 1.0;
+  border-radius: 20px;
+ 
+}
+
+
+
+
+.change {
+  float: right;
+  color: #7FFF00;
+}
+.change:hover{
+  color: white;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #87CEEB;
+  display: block;
+  transition: 0.3s;
+}
+.openNav {
+  background:#A9A9A9;
+}
+
+.sidenav a:hover {
+  color: #228B22;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  color: white;
+  font-weight: bolder;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

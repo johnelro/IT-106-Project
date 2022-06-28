@@ -1,0 +1,48 @@
+{% extends "login-base.html" %}
+
+{% block login-content %}
+
+{% load socialaccount %}
+
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="login.css">
+<form method="POST" action="">
+  {% csrf_token %}
+  <div class="container">
+    <div class="container1">
+      <div class="container2">
+        <center><img src="{% static 'img/picture.png' %}" /></center><br><br>
+        <label for="uname"><b>Username</b></label>
+        <input class="round" type="text" placeholder="Enter username" name="username" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input class="round" type="password" placeholder="Enter Password" name="password" required>
+            
+        <button type="submit">Login</button>
+        <input type="checkbox" checked="checked" name="remember"> Remember me<br><br>
+        <label for="signup">No account? <a href="/registration">Register</a></label>
+
+
+        <hr>
+        <!--Social Media log in -->
+        <center><h3>OR</h3></center>
+        
+        <hr>
+         <div class="col">
+           <div>
+            <center><a href="{% provider_login_url 'google' method = 'oauth2' %}"><img src="{% static 'img/google.png' %}" width="10" height="10"/></a>
+              <a href="{% provider_login_url 'facebook' method= 'oauth2' %}"><img src="{% static 'img/facebook.png' %}"/></a></center>
+              <br><br>
+              <div class="foot">
+                <center><p></p></center>
+              </div>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+{% endblock login-content %}

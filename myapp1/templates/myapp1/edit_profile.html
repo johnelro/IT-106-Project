@@ -1,0 +1,27 @@
+{% extends "Edit.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block edit-content %}
+
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="login.css">
+<form method="POST" action="">
+  {% csrf_token %}
+  <div class="container">
+    <div class="container1">
+      <div class="container2">
+         <center><h1>Edit Profile info</h1></center>
+          {{u_form|crispy}}
+          <br>
+          <br>
+        <button class="btn btn secodary">Update profile</button>
+       
+      
+    </div>
+  </div>
+</form>
+
+{% endblock edit-content %}

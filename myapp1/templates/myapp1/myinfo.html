@@ -1,0 +1,21 @@
+{% extends "profile-nav.html" %}
+
+{% load static %}
+
+{% block profile-content %}
+<a class="change" href="/edit_profile">Change Basic Profile</a>
+<br>
+<br>
+<div id="boxx">
+  <div id = b0xx2>
+    <center><div id = boxx3>
+      <center><img src="{% static 'img/picture.png' %}" /></center><br><br>
+      <h2>Username: "{{ user.username }}"</h2>
+      <h2>Firstname: "{{ user.first_name }}"</h2>
+      <h2>Lastname: "{{ user.last_name }}"</h2>
+      <h2>Email: "{{ user.email }}"</h2>
+    </div></center> 
+  </div>
+</div>
+  
+{% endblock profile-content %}
